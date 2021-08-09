@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import {FaBars} from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 import { MobileIcon, 
          Nav, 
          NavbarContainer, 
@@ -11,11 +12,31 @@ import { MobileIcon,
          NavMenu } from './NavbarElements';
 
 const Navbar = ({toggle}) => {
+
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if(window.scrollY >= 80){
+            setScrollNav(true);
+        }
+        else{
+            setScrollNav(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav);
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
     return (
         <Fragment>
-            <Nav>
+            <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/">dolla</NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}>dolla</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
