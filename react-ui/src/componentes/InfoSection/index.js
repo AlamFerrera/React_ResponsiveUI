@@ -16,8 +16,9 @@ import { BtnWrap,
 function InfoSection({id,lightBg,imgStart, topLine,lighText,headLine,darkText,description,buttonLabel,img,alt, primary, dark, dark2}) {
     return (
         <>
-            <InfoContainer lightBg={lightBg} id={id}>
-                <InfoWrapper>
+            <InfoContainer lightBg={lightBg}>
+                
+                <InfoWrapper id={id}>
                     <InfoRow imgStart= {imgStart}>
                         <Column1>
                             <TextWrapper>
@@ -25,7 +26,7 @@ function InfoSection({id,lightBg,imgStart, topLine,lighText,headLine,darkText,de
                                 <Heading lighText={lighText}>{headLine}</Heading>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <Button to="home"
+                                    <Button to="/"
                                             smooth={true}
                                             duration={500}
                                             spy={true}

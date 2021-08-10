@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import SignIn from '../componentes/SignIn';
 
 function SigninPage() {
+
     return (
         <div>
-            <h1>SignIn Page</h1>
+            <SignIn />
         </div>
     )
 }

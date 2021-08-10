@@ -1,4 +1,5 @@
 import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube} from 'react-icons/fa';
 import { FooterContainer, 
     FooterLink, 
@@ -15,6 +16,11 @@ import { FooterContainer,
     WebsiteRights} from './footerElements';
 
 function Footer() {
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
     return (
         <FooterContainer>
             <FooterWrap>
@@ -56,7 +62,7 @@ function Footer() {
 
                 <SocialMedia>
                     <SocialMediaWrap>
-                        <SocialLogo to="/">Dolla</SocialLogo>
+                        <SocialLogo to="/" onClick={toggleHome}>Dolla</SocialLogo>
                         <WebsiteRights>
                             dolla &copy; {new Date().getFullYear()} All Right Reserved
                         </WebsiteRights>

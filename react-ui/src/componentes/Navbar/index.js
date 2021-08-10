@@ -42,16 +42,40 @@ const Navbar = ({toggle}) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about" >About</NavLinks>
+                            <NavLinks to="about"
+                                      smooth={true}
+                                      duration={500}
+                                      exact='true'
+                                      offset={-80}
+                                      spy={true} >About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="discover" >Discover</NavLinks>
+                            <NavLinks to="discover"
+                                      smooth={true}
+                                      duration={500}
+                                      spy={true}
+                                      exact='true'
+                                      offset={-80}
+                                       >Discover</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services" >Services</NavLinks>
+                            <NavLinks to="services"
+                                      smooth={true}
+                                      duration={500}
+                                      onClick={() => console.log("click")}
+                                      spy={true}
+                                      exact='true'
+                                      offset={-80}
+                                       >Services</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="signUp" >Sign Up</NavLinks>
+                            <NavLinks to="signUp"
+                                      smooth={true}
+                                      duration={500}
+                                      spy={true}
+                                      exact='true'
+                                      offset={-80}
+                                       >Sign Up</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>

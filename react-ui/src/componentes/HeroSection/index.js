@@ -34,7 +34,7 @@ function HeroSection() {
                     Sign up for a new account today and receive $250 in credit towards your next payment
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to="signup" 
+                    <Button to="signUp" 
                             onMouseEnter={onHover} 
                             onMouseLeave={onHover}
                             primary="true"
